@@ -13,5 +13,8 @@ namespace LaboratoryWork2
 
         public override double Area() => Math.PI * Radius * Radius;
         public void Print() => Console.WriteLine(this.ToString());
+
+        public override string ToString() => $"{this.FigureName} с площадью {this.Area()}";
+      
     }
 }

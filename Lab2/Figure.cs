@@ -19,9 +19,5 @@ namespace LaboratoryWork2
             return 1;
         }
 
-        public override string ToString()
-        {
-            return $"{this.FigureName} с площадью {this.Area()}";
-        }
     }
 }
