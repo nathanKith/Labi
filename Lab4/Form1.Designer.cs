@@ -34,13 +34,17 @@
             this.listBox = new System.Windows.Forms.ListBox();
             this.labelFind = new System.Windows.Forms.Label();
             this.labelRead = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxLength = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonRead
             // 
-            this.buttonRead.Location = new System.Drawing.Point(21, 63);
+            this.buttonRead.Location = new System.Drawing.Point(12, 12);
             this.buttonRead.Name = "buttonRead";
-            this.buttonRead.Size = new System.Drawing.Size(133, 51);
+            this.buttonRead.Size = new System.Drawing.Size(851, 58);
             this.buttonRead.TabIndex = 0;
             this.buttonRead.Text = "СЧИТАТЬ";
             this.buttonRead.UseVisualStyleBackColor = true;
@@ -48,17 +52,17 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(397, 120);
+            this.textBox2.Location = new System.Drawing.Point(12, 76);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 26);
+            this.textBox2.Size = new System.Drawing.Size(851, 26);
             this.textBox2.TabIndex = 2;
             this.textBox2.Text = "Введите слово";
             // 
             // buttonFind
             // 
-            this.buttonFind.Location = new System.Drawing.Point(415, 64);
+            this.buttonFind.Location = new System.Drawing.Point(12, 108);
             this.buttonFind.Name = "buttonFind";
-            this.buttonFind.Size = new System.Drawing.Size(127, 50);
+            this.buttonFind.Size = new System.Drawing.Size(332, 74);
             this.buttonFind.TabIndex = 3;
             this.buttonFind.Text = "НАЙТИ";
             this.buttonFind.UseVisualStyleBackColor = true;
@@ -68,15 +72,15 @@
             // 
             this.listBox.FormattingEnabled = true;
             this.listBox.ItemHeight = 20;
-            this.listBox.Location = new System.Drawing.Point(378, 152);
+            this.listBox.Location = new System.Drawing.Point(12, 188);
             this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(200, 144);
+            this.listBox.Size = new System.Drawing.Size(851, 284);
             this.listBox.TabIndex = 4;
             // 
             // labelFind
             // 
             this.labelFind.AutoSize = true;
-            this.labelFind.Location = new System.Drawing.Point(443, 41);
+            this.labelFind.Location = new System.Drawing.Point(399, 150);
             this.labelFind.Name = "labelFind";
             this.labelFind.Size = new System.Drawing.Size(73, 20);
             this.labelFind.TabIndex = 5;
@@ -85,17 +89,56 @@
             // labelRead
             // 
             this.labelRead.AutoSize = true;
-            this.labelRead.Location = new System.Drawing.Point(38, 120);
+            this.labelRead.Location = new System.Drawing.Point(561, 150);
             this.labelRead.Name = "labelRead";
             this.labelRead.Size = new System.Drawing.Size(81, 20);
             this.labelRead.TabIndex = 6;
             this.labelRead.Text = "labelRead";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(381, 120);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Время поиска:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(539, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 20);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Время чтения:";
+            // 
+            // textBoxLength
+            // 
+            this.textBoxLength.Location = new System.Drawing.Point(681, 144);
+            this.textBoxLength.Name = "textBoxLength";
+            this.textBoxLength.Size = new System.Drawing.Size(167, 26);
+            this.textBoxLength.TabIndex = 9;
+            this.textBoxLength.Text = "2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(709, 120);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 20);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Расстояние";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 496);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBoxLength);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelRead);
             this.Controls.Add(this.labelFind);
             this.Controls.Add(this.listBox);
@@ -103,8 +146,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.buttonRead);
             this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Толпаров Натан ИУ5-31Б";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,6 +159,10 @@
         private System.Windows.Forms.ListBox listBox;
         private System.Windows.Forms.Label labelFind;
         private System.Windows.Forms.Label labelRead;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxLength;
+        private System.Windows.Forms.Label label3;
     }
 }
 

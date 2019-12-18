@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using LevenstationDistance;
 
 namespace Lab4
 {
@@ -19,15 +15,11 @@ namespace Lab4
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        public List<string> List { get; set; } = new List<string>();
+        public List<string> WordList { get; set; }
 
         private void ButtonRead_Click(object sender, EventArgs e)
         {
+            WordList = new List<string>();
             // open file dialog
             var fileDialog = new OpenFileDialog
             {
@@ -37,21 +29,21 @@ namespace Lab4
             fileDialog.ShowDialog();
             if (fileDialog.FileName == "")
             {
+                MessageBox.Show("Выберите файл");
                 return;
             }
 
             var time = new Stopwatch();
             time.Start();
-
             // reading
             using (var sr = new StreamReader(fileDialog.FileName, Encoding.UTF8))
             {
                 var text = sr.ReadToEnd();
                 foreach (var word in text.Split())
                 {
-                    if (!List.Contains(word))
+                    if (!WordList.Contains(word))
                     {
-                        List.Add(word);
+                        WordList.Add(word);
                     }
                 }
             }
@@ -64,18 +56,34 @@ namespace Lab4
 
         private void ButtonFind_Click(object sender, EventArgs e)
         {
-            var time = new Stopwatch();
-            time.Start();
-            if (List.Contains(textBox2.Text))
+            int maxDistance;
+            if (!int.TryParse(textBoxLength.Text.Trim(), out maxDistance))
             {
-                listBox.BeginUpdate();
-                listBox.Items.Add(textBox2.Text);
-                listBox.EndUpdate();
+                MessageBox.Show("Неккоректные данные");
             }
-            time.Stop();
+            else
+            {
+                var time = new Stopwatch();
+                time.Start();
+                foreach(var item in WordList)
+                {
+                    if (Levenstain.Distance(item.ToLower(), textBox2.Text.ToLower()) < maxDistance)
+                    {
+                        listBox.BeginUpdate();
+                        listBox.Items.Add(item);
+                        listBox.EndUpdate();
+                    }
+                }
+                time.Stop();
 
-            var result = time.Elapsed.TotalMilliseconds;
-            labelFind.Text = result.ToString();
+                var result = time.Elapsed.TotalMilliseconds;
+                labelFind.Text = result.ToString();
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
