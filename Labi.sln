@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab4", "Lab4\Lab4.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevenstationDistance", "LevenstationDistance\LevenstationDistance.csproj", "{ABFA3BD4-BF09-4869-BC59-FAACFC3BAF2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab6_1", "Lab6_1\Lab6_1.csproj", "{6026E5AD-4C77-4405-AABB-169AFDFC0D81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{ABFA3BD4-BF09-4869-BC59-FAACFC3BAF2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABFA3BD4-BF09-4869-BC59-FAACFC3BAF2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABFA3BD4-BF09-4869-BC59-FAACFC3BAF2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6026E5AD-4C77-4405-AABB-169AFDFC0D81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6026E5AD-4C77-4405-AABB-169AFDFC0D81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6026E5AD-4C77-4405-AABB-169AFDFC0D81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6026E5AD-4C77-4405-AABB-169AFDFC0D81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
